@@ -1,5 +1,3 @@
-const { factory, expect, serverConfig } = require("../helpers");
-
 let request, response;
 
 before((done) => {
@@ -7,7 +5,8 @@ before((done) => {
 });
 
 beforeEach(async () => {
-  await factory.create("Book");
+  let author = await factory.create("Author");
+  await factory.create("Book", {AuthorId: author.id});  
 });
 
 afterEach(async () => {

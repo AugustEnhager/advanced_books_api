@@ -1,6 +1,6 @@
 module.exports = (factory, Models) => {
-  factory.define('Book', Models.Book, {
-    title: 'My Awesome First Novel',        
+  factory.define('Author', Models.Author, {
+    name: 'J.R.R Tolkien',        
     createdAt: new Date(),
     updatedAt: new Date()
   })
